@@ -1,43 +1,43 @@
-
-// Inicializa los elementos de Carbon Design System
 window.onload = () => {
     CarbonComponents.settings.disableAutoInit = true;
     CarbonComponents.init();
 };
 
-let stepIndex = 0;
+let stepIndex = 1;
 const steps = document.querySelectorAll('.step');
 
-// Función para avanzar al siguiente paso
 function nextStep() {
-    if (stepIndex < steps.length - 1) {
-        steps[stepIndex].classList.add('hidden');
-        stepIndex++;
-        steps[stepIndex].classList.remove('hidden');
-    } else {
-        showFinalView();
-    }
+    document.getElementById(`step-${stepIndex}`).classList.add('hidden');
+    stepIndex++;
+    document.getElementById(`step-${stepIndex}`).classList.remove('hidden');
 }
 
-// Muestra la vista final para resumen y generación del PDF
 function showFinalView() {
+    document.getElementById(`step-${stepIndex}`).classList.add('hidden');
     const finalView = document.getElementById('final-view');
     finalView.classList.remove('hidden');
 
-    // Obtiene los datos de los pasos completados
-    const purpose = document.getElementById('purpose').value;
-
-    // Muestra el resumen usando los componentes de Carbon (Accordion)
-    document.getElementById('summary').innerHTML = `
-        <h3 class="bx--type-expressive-heading-03">Propósito</h3>
-        <p>${purpose}</p>
+    const summaryContent = `
+        <h3>Propósito</h3>
+        <p>${document.getElementById('purpose').value}</p>
+        <h3>Descripción del Problema</h3>
+        <p>${document.getElementById('problem').value}</p>
+        <h3>Preguntas Clave</h3>
+        <p>${document.getElementById('questions').value}</p>
+        <h3>Oportunidades Identificadas</h3>
+        <p>${document.getElementById('opportunities').value}</p>
+        <h3>Plan de Acción</h3>
+        <p>${document.getElementById('actionPlan').value}</p>
+        <h3>Reflexiones y Ajustes</h3>
+        <p>${document.getElementById('evaluation').value}</p>
     `;
+
+    document.getElementById('summary').innerHTML = summaryContent;
 }
 
-// Función para generar el PDF
 function generatePDF() {
-    const summaryContent = document.getElementById('summary').innerText;
+    const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
-    doc.text(summaryContent, 10, 10);
+    doc.text(document.getElementById('summary').innerText, 10, 10);
     doc.save('documento_planificacion.pdf');
 }
