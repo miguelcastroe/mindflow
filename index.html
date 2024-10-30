@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramienta de Planificación con IA</title>
+    <!-- Estilos de Carbon desde CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/carbon-components/css/carbon-components.min.css">
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+    <div class="bx--grid bx--grid--full-width">
+        <header class="bx--row">
+            <h1 class="bx--type-expressive-heading-05">Herramienta de Planificación con IA</h1>
+        </header>
+
+        <!-- Paso 1: Definir el Propósito -->
+        <section id="step-1" class="step bx--row">
+            <h2 class="bx--type-expressive-heading-04">Definir el Propósito</h2>
+            <div class="bx--form-item">
+                <label for="purpose" class="bx--label">Propósito del Proyecto</label>
+                <input type="text" id="purpose" class="bx--text-input" placeholder="Escribe el propósito aquí">
+            </div>
+            <button onclick="nextStep()" class="bx--btn bx--btn--primary">Continuar</button>
+        </section>
+
+        <!-- Otros pasos se añadirían aquí siguiendo el mismo formato -->
+
+        <!-- Vista Final para Resumen y PDF -->
+        <section id="final-view" class="step hidden bx--row">
+            <h2 class="bx--type-expressive-heading-04">Resumen y Generación del Documento</h2>
+            <div id="summary" class="bx--accordion">
+                <!-- Aquí se mostrarán los resúmenes de los pasos anteriores -->
+            </div>
+            <button onclick="generatePDF()" class="bx--btn bx--btn--primary">Generar PDF</button>
+        </section>
+    </div>
+
+    <!-- Scripts de Carbon -->
+    <script src="https://unpkg.com/carbon-components/scripts/carbon-components.min.js"></script>
+    <script src="./scripts/app.js"></script>
+</body>
+</html>
