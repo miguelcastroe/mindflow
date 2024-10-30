@@ -1,22 +1,37 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: #f4f4f4;
+    color: #393939;
 }
 
-.container {
-    max-width: 600px;
+.bx--grid {
+    max-width: 700px;
     margin: 0 auto;
     padding: 20px;
 }
 
-.hidden {
-    display: none;
-}
-
-.step {
+header {
+    text-align: center;
     margin-bottom: 20px;
 }
 
-header {
-    text-align: center;
-    padding-bottom: 20px;
+.step, .final-view {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.bx--text-input, .bx--text-area {
+    width: 100%;
+}
+
+button.bx--btn {
+    display: block;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
 }
