@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.step {
+    margin-bottom: 20px;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 20px;
+}
