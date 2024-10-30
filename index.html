@@ -13,110 +13,115 @@
 </head>
 <body>
     <div class="bx--grid bx--grid--full-width bx--layout--center">
-        <header class="bx--row">
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
+
+        <header class="bx--row" style="margin-bottom: 20px;">
             <div class="bx--col-lg-12 bx--col-md-8 bx--col-sm-4">
-                <h1 class="bx--type-expressive-heading-05">MindFlow | Pensamiento para la IA</h1>
+                <h1 class="bx--type-expressive-heading-05" style="text-align: center; padding: 20px;">MindFlow | Pensamiento para la IA</h1>
             </div>
         </header>
 
         <!-- Step 1: Definir el Propósito -->
         <section id="step-1" class="step bx--row">
-            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4 bx--card">
+            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4 bx--card" style="padding: 30px;">
                 <h2 class="bx--type-expressive-heading-04">
-                    <span class="bx--pictogram bx--pictogram--idea"></span> Definir el Propósito
+                    <span class="bx--icon bx--icon--small bx--idea small-icon"></span> Definir el Propósito
                 </h2>
                 <p class="bx--type-body-long-01">Especifica el objetivo principal de tu proyecto.</p>
-                <div class="bx--form-item">
+                <div class="bx--form-item" style="margin-top: 15px;">
                     <label for="purpose" class="bx--label">Propósito del Proyecto</label>
                     <input type="text" id="purpose" class="bx--text-input" placeholder="Escribe el propósito aquí">
                 </div>
-                <button onclick="nextStep()" class="bx--btn bx--btn--primary">Continuar</button>
+                <button onclick="nextStep()" class="bx--btn bx--btn--primary" style="margin-top: 20px;">Continuar</button>
             </div>
         </section>
 
         <!-- Step 2: Explorar el Problema -->
         <section id="step-2" class="step hidden bx--row">
-            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4 bx--card">
+            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4 bx--card" style="padding: 30px;">
                 <h2 class="bx--type-expressive-heading-04">
-                    <span class="bx--pictogram bx--pictogram--search"></span> Explorar el Problema
+                    <span class="bx--icon bx--icon--small bx--search small-icon"></span> Explorar el Problema
                 </h2>
                 <p class="bx--type-body-long-01">Analiza y describe el reto que quieres abordar.</p>
-                <div class="bx--form-item">
+                <div class="bx--form-item" style="margin-top: 15px;">
                     <label for="problem" class="bx--label">Descripción del Problema</label>
                     <textarea id="problem" class="bx--text-area" rows="4" placeholder="Describe el reto aquí"></textarea>
                 </div>
-                <button onclick="nextStep()" class="bx--btn bx--btn--primary">Continuar</button>
+                <button onclick="nextStep()" class="bx--btn bx--btn--primary" style="margin-top: 20px;">Continuar</button>
             </div>
         </section>
 
         <!-- Step 3: Formulación de Preguntas Efectivas -->
         <section id="step-3" class="step hidden bx--row">
-            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4 bx--card">
+            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4 bx--card" style="padding: 30px;">
                 <h2 class="bx--type-expressive-heading-04">
-                    <span class="bx--pictogram bx--pictogram--task"></span> Formulación de Preguntas Efectivas
+                    <span class="bx--icon bx--icon--small bx--task small-icon"></span> Formulación de Preguntas Efectivas
                 </h2>
                 <p class="bx--type-body-long-01">Escribe preguntas clave que guiarán tu análisis.</p>
-                <div class="bx--form-item">
+                <div class="bx--form-item" style="margin-top: 15px;">
                     <label for="questions" class="bx--label">Preguntas Clave</label>
                     <textarea id="questions" class="bx--text-area" rows="4" placeholder="Escribe tus preguntas aquí"></textarea>
                 </div>
-                <button onclick="nextStep()" class="bx--btn bx--btn--primary">Continuar</button>
+                <button onclick="nextStep()" class="bx--btn bx--btn--primary" style="margin-top: 20px;">Continuar</button>
             </div>
         </section>
 
         <!-- Step 4: Identificación de Oportunidades -->
         <section id="step-4" class="step hidden bx--row">
-            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4 bx--card">
+            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4 bx--card" style="padding: 30px;">
                 <h2 class="bx--type-expressive-heading-04">
-                    <span class="bx--pictogram bx--pictogram--data--view"></span> Identificación de Oportunidades
+                    <span class="bx--icon bx--icon--small bx--data--view small-icon"></span> Identificación de Oportunidades
                 </h2>
                 <p class="bx--type-body-long-01">Anota posibles oportunidades de aplicación.</p>
-                <div class="bx--form-item">
+                <div class="bx--form-item" style="margin-top: 15px;">
                     <label for="opportunities" class="bx--label">Oportunidades Identificadas</label>
                     <textarea id="opportunities" class="bx--text-area" rows="4" placeholder="Escribe oportunidades aquí"></textarea>
                 </div>
-                <button onclick="nextStep()" class="bx--btn bx--btn--primary">Continuar</button>
+                <button onclick="nextStep()" class="bx--btn bx--btn--primary" style="margin-top: 20px;">Continuar</button>
             </div>
         </section>
 
         <!-- Step 5: Plan de Acción -->
         <section id="step-5" class="step hidden bx--row">
-            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4 bx--card">
+            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4 bx--card" style="padding: 30px;">
                 <h2 class="bx--type-expressive-heading-04">
-                    <span class="bx--pictogram bx--pictogram--chart--scatter"></span> Plan de Acción
+                    <span class="bx--icon bx--icon--small bx--chart--scatter small-icon"></span> Plan de Acción
                 </h2>
                 <p class="bx--type-body-long-01">Especifica las acciones a tomar para implementar tu proyecto.</p>
-                <div class="bx--form-item">
+                <div class="bx--form-item" style="margin-top: 15px;">
                     <label for="actionPlan" class="bx--label">Acciones Específicas</label>
                     <textarea id="actionPlan" class="bx--text-area" rows="4" placeholder="Describe las acciones específicas"></textarea>
                 </div>
-                <button onclick="nextStep()" class="bx--btn bx--btn--primary">Continuar</button>
+                <button onclick="nextStep()" class="bx--btn bx--btn--primary" style="margin-top: 20px;">Continuar</button>
             </div>
         </section>
 
         <!-- Step 6: Evaluación y Ajustes -->
         <section id="step-6" class="step hidden bx--row">
-            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4 bx--card">
+            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4 bx--card" style="padding: 30px;">
                 <h2 class="bx--type-expressive-heading-04">
-                    <span class="bx--pictogram bx--pictogram--checkmark--outline"></span> Evaluación y Ajustes
+                    <span class="bx--icon bx--icon--small bx--checkmark--outline small-icon"></span> Evaluación y Ajustes
                 </h2>
                 <p class="bx--type-body-long-01">Reflexiona y ajusta tus planes según lo aprendido.</p>
-                <div class="bx--form-item">
+                <div class="bx--form-item" style="margin-top: 15px;">
                     <label for="evaluation" class="bx--label">Reflexiones y Ajustes</label>
                     <textarea id="evaluation" class="bx--text-area" rows="4" placeholder="Describe los ajustes necesarios"></textarea>
                 </div>
-                <button onclick="showFinalView()" class="bx--btn bx--btn--primary">Finalizar</button>
+                <button onclick="showFinalView()" class="bx--btn bx--btn--primary" style="margin-top: 20px;">Finalizar</button>
             </div>
         </section>
 
         <!-- Final view for Summary and PDF generation -->
         <section id="final-view" class="step hidden bx--row">
-            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4 bx--card">
+            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4 bx--card" style="padding: 30px;">
                 <h2 class="bx--type-expressive-heading-04">Resumen y Generación del Documento</h2>
                 <div id="summary" class="bx--accordion">
                     <!-- Summary of completed steps will appear here -->
                 </div>
-                <button onclick="generatePDF()" class="bx--btn bx--btn--primary">Generar PDF</button>
+                <button onclick="generatePDF()" class="bx--btn bx--btn--primary" style="margin-top: 20px;">Generar PDF</button>
             </div>
         </section>
     </div>
