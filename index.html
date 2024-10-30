@@ -1,44 +1,110 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Herramienta de Planificación con IA</title>
-    <!-- Estilos de Carbon desde CDN -->
+    <title>MindFlow | Pensamiento para la IA</title>
+    <!-- IBM Plex Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400&display=swap">
+    <!-- Carbon Design System styles from CDN -->
     <link rel="stylesheet" href="https://unpkg.com/carbon-components/css/carbon-components.min.css">
     <link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
-    <div class="bx--grid bx--grid--full-width">
+    <div class="bx--grid bx--grid--full-width bx--layout--center">
         <header class="bx--row">
-            <h1 class="bx--type-expressive-heading-05">Herramienta de Planificación con IA</h1>
+            <div class="bx--col-lg-12 bx--col-md-8 bx--col-sm-4">
+                <h1 class="bx--type-expressive-heading-05">MindFlow | Pensamiento para la IA</h1>
+            </div>
         </header>
 
-        <!-- Paso 1: Definir el Propósito -->
+        <!-- Step 1: Definir el Propósito -->
         <section id="step-1" class="step bx--row">
-            <h2 class="bx--type-expressive-heading-04">Definir el Propósito</h2>
-            <div class="bx--form-item">
-                <label for="purpose" class="bx--label">Propósito del Proyecto</label>
-                <input type="text" id="purpose" class="bx--text-input" placeholder="Escribe el propósito aquí">
+            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4">
+                <h2 class="bx--type-expressive-heading-04">Definir el Propósito</h2>
+                <div class="bx--form-item">
+                    <label for="purpose" class="bx--label">Propósito del Proyecto</label>
+                    <input type="text" id="purpose" class="bx--text-input" placeholder="Escribe el propósito aquí">
+                </div>
+                <button onclick="nextStep()" class="bx--btn bx--btn--primary">Continuar</button>
             </div>
-            <button onclick="nextStep()" class="bx--btn bx--btn--primary">Continuar</button>
         </section>
 
-        <!-- Otros pasos se añadirían aquí siguiendo el mismo formato -->
-
-        <!-- Vista Final para Resumen y PDF -->
-        <section id="final-view" class="step hidden bx--row">
-            <h2 class="bx--type-expressive-heading-04">Resumen y Generación del Documento</h2>
-            <div id="summary" class="bx--accordion">
-                <!-- Aquí se mostrarán los resúmenes de los pasos anteriores -->
+        <!-- Step 2: Explorar el Problema -->
+        <section id="step-2" class="step hidden bx--row">
+            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4">
+                <h2 class="bx--type-expressive-heading-04">Explorar el Problema</h2>
+                <div class="bx--form-item">
+                    <label for="problem" class="bx--label">Descripción del Problema</label>
+                    <textarea id="problem" class="bx--text-area" rows="4" placeholder="Describe el reto aquí"></textarea>
+                </div>
+                <button onclick="nextStep()" class="bx--btn bx--btn--primary">Continuar</button>
             </div>
-            <button onclick="generatePDF()" class="bx--btn bx--btn--primary">Generar PDF</button>
+        </section>
+
+        <!-- Step 3: Formulación de Preguntas Efectivas -->
+        <section id="step-3" class="step hidden bx--row">
+            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4">
+                <h2 class="bx--type-expressive-heading-04">Formulación de Preguntas Efectivas</h2>
+                <div class="bx--form-item">
+                    <label for="questions" class="bx--label">Preguntas Clave</label>
+                    <textarea id="questions" class="bx--text-area" rows="4" placeholder="Escribe tus preguntas aquí"></textarea>
+                </div>
+                <button onclick="nextStep()" class="bx--btn bx--btn--primary">Continuar</button>
+            </div>
+        </section>
+
+        <!-- Step 4: Identificación de Oportunidades -->
+        <section id="step-4" class="step hidden bx--row">
+            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4">
+                <h2 class="bx--type-expressive-heading-04">Identificación de Oportunidades</h2>
+                <div class="bx--form-item">
+                    <label for="opportunities" class="bx--label">Oportunidades Identificadas</label>
+                    <textarea id="opportunities" class="bx--text-area" rows="4" placeholder="Escribe oportunidades aquí"></textarea>
+                </div>
+                <button onclick="nextStep()" class="bx--btn bx--btn--primary">Continuar</button>
+            </div>
+        </section>
+
+        <!-- Step 5: Plan de Acción -->
+        <section id="step-5" class="step hidden bx--row">
+            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4">
+                <h2 class="bx--type-expressive-heading-04">Plan de Acción</h2>
+                <div class="bx--form-item">
+                    <label for="actionPlan" class="bx--label">Acciones Específicas</label>
+                    <textarea id="actionPlan" class="bx--text-area" rows="4" placeholder="Describe las acciones específicas"></textarea>
+                </div>
+                <button onclick="nextStep()" class="bx--btn bx--btn--primary">Continuar</button>
+            </div>
+        </section>
+
+        <!-- Step 6: Evaluación y Ajustes -->
+        <section id="step-6" class="step hidden bx--row">
+            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4">
+                <h2 class="bx--type-expressive-heading-04">Evaluación y Ajustes</h2>
+                <div class="bx--form-item">
+                    <label for="evaluation" class="bx--label">Reflexiones y Ajustes</label>
+                    <textarea id="evaluation" class="bx--text-area" rows="4" placeholder="Describe los ajustes necesarios"></textarea>
+                </div>
+                <button onclick="showFinalView()" class="bx--btn bx--btn--primary">Finalizar</button>
+            </div>
+        </section>
+
+        <!-- Final view for Summary and PDF generation -->
+        <section id="final-view" class="step hidden bx--row">
+            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4">
+                <h2 class="bx--type-expressive-heading-04">Resumen y Generación del Documento</h2>
+                <div id="summary" class="bx--accordion">
+                    <!-- Summary of completed steps will appear here -->
+                </div>
+                <button onclick="generatePDF()" class="bx--btn bx--btn--primary">Generar PDF</button>
+            </div>
         </section>
     </div>
 
-    <!-- Scripts de Carbon -->
+    <!-- Carbon Design System scripts -->
     <script src="https://unpkg.com/carbon-components/scripts/carbon-components.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script src="./scripts/app.js"></script>
 </body>
 </html>
