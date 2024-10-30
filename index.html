@@ -6,8 +6,9 @@
     <title>MindFlow | Pensamiento para la IA</title>
     <!-- IBM Plex Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400&display=swap">
-    <!-- Carbon Design System styles from CDN -->
+    <!-- Carbon Design System styles and icons from CDN -->
     <link rel="stylesheet" href="https://unpkg.com/carbon-components/css/carbon-components.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@carbon/icons/css/carbon-icons.min.css">
     <link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
@@ -20,8 +21,11 @@
 
         <!-- Step 1: Definir el Propósito -->
         <section id="step-1" class="step bx--row">
-            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4">
-                <h2 class="bx--type-expressive-heading-04">Definir el Propósito</h2>
+            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4 bx--card">
+                <h2 class="bx--type-expressive-heading-04">
+                    <span class="bx--pictogram bx--pictogram--idea"></span> Definir el Propósito
+                </h2>
+                <p class="bx--type-body-long-01">Especifica el objetivo principal de tu proyecto.</p>
                 <div class="bx--form-item">
                     <label for="purpose" class="bx--label">Propósito del Proyecto</label>
                     <input type="text" id="purpose" class="bx--text-input" placeholder="Escribe el propósito aquí">
@@ -32,8 +36,11 @@
 
         <!-- Step 2: Explorar el Problema -->
         <section id="step-2" class="step hidden bx--row">
-            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4">
-                <h2 class="bx--type-expressive-heading-04">Explorar el Problema</h2>
+            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4 bx--card">
+                <h2 class="bx--type-expressive-heading-04">
+                    <span class="bx--pictogram bx--pictogram--search"></span> Explorar el Problema
+                </h2>
+                <p class="bx--type-body-long-01">Analiza y describe el reto que quieres abordar.</p>
                 <div class="bx--form-item">
                     <label for="problem" class="bx--label">Descripción del Problema</label>
                     <textarea id="problem" class="bx--text-area" rows="4" placeholder="Describe el reto aquí"></textarea>
@@ -44,8 +51,11 @@
 
         <!-- Step 3: Formulación de Preguntas Efectivas -->
         <section id="step-3" class="step hidden bx--row">
-            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4">
-                <h2 class="bx--type-expressive-heading-04">Formulación de Preguntas Efectivas</h2>
+            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4 bx--card">
+                <h2 class="bx--type-expressive-heading-04">
+                    <span class="bx--pictogram bx--pictogram--task"></span> Formulación de Preguntas Efectivas
+                </h2>
+                <p class="bx--type-body-long-01">Escribe preguntas clave que guiarán tu análisis.</p>
                 <div class="bx--form-item">
                     <label for="questions" class="bx--label">Preguntas Clave</label>
                     <textarea id="questions" class="bx--text-area" rows="4" placeholder="Escribe tus preguntas aquí"></textarea>
@@ -56,8 +66,11 @@
 
         <!-- Step 4: Identificación de Oportunidades -->
         <section id="step-4" class="step hidden bx--row">
-            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4">
-                <h2 class="bx--type-expressive-heading-04">Identificación de Oportunidades</h2>
+            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4 bx--card">
+                <h2 class="bx--type-expressive-heading-04">
+                    <span class="bx--pictogram bx--pictogram--data--view"></span> Identificación de Oportunidades
+                </h2>
+                <p class="bx--type-body-long-01">Anota posibles oportunidades de aplicación.</p>
                 <div class="bx--form-item">
                     <label for="opportunities" class="bx--label">Oportunidades Identificadas</label>
                     <textarea id="opportunities" class="bx--text-area" rows="4" placeholder="Escribe oportunidades aquí"></textarea>
@@ -68,8 +81,11 @@
 
         <!-- Step 5: Plan de Acción -->
         <section id="step-5" class="step hidden bx--row">
-            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4">
-                <h2 class="bx--type-expressive-heading-04">Plan de Acción</h2>
+            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4 bx--card">
+                <h2 class="bx--type-expressive-heading-04">
+                    <span class="bx--pictogram bx--pictogram--chart--scatter"></span> Plan de Acción
+                </h2>
+                <p class="bx--type-body-long-01">Especifica las acciones a tomar para implementar tu proyecto.</p>
                 <div class="bx--form-item">
                     <label for="actionPlan" class="bx--label">Acciones Específicas</label>
                     <textarea id="actionPlan" class="bx--text-area" rows="4" placeholder="Describe las acciones específicas"></textarea>
@@ -80,8 +96,11 @@
 
         <!-- Step 6: Evaluación y Ajustes -->
         <section id="step-6" class="step hidden bx--row">
-            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4">
-                <h2 class="bx--type-expressive-heading-04">Evaluación y Ajustes</h2>
+            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4 bx--card">
+                <h2 class="bx--type-expressive-heading-04">
+                    <span class="bx--pictogram bx--pictogram--checkmark--outline"></span> Evaluación y Ajustes
+                </h2>
+                <p class="bx--type-body-long-01">Reflexiona y ajusta tus planes según lo aprendido.</p>
                 <div class="bx--form-item">
                     <label for="evaluation" class="bx--label">Reflexiones y Ajustes</label>
                     <textarea id="evaluation" class="bx--text-area" rows="4" placeholder="Describe los ajustes necesarios"></textarea>
@@ -92,7 +111,7 @@
 
         <!-- Final view for Summary and PDF generation -->
         <section id="final-view" class="step hidden bx--row">
-            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4">
+            <div class="bx--col-lg-8 bx--col-md-6 bx--col-sm-4 bx--card">
                 <h2 class="bx--type-expressive-heading-04">Resumen y Generación del Documento</h2>
                 <div id="summary" class="bx--accordion">
                     <!-- Summary of completed steps will appear here -->
